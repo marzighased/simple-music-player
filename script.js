@@ -12,3 +12,15 @@ const tracks = [
         url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
     }
 ];
+
+let currentTrack = 0;
+const audio = document.getElementById("audio");
+const trackName = document.getElementById("trackName");
+const playBtn = document.getElementById("playBtn");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn= document.getElementById("nextBtn");
+
+function loadTrack(index) {
+    audio.src = tracks[index].url;
+    trackName.textContent = tracks[index].name;
+}
