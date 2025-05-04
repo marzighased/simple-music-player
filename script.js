@@ -24,3 +24,15 @@ function loadTrack(index) {
     audio.src = tracks[index].url;
     trackName.textContent = tracks[index].name;
 }
+
+loadTrack(currentTrack);
+
+playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "Pause";
+    } else {
+        audio.pause();
+        playBtn.textContent = "Play";
+    }
+});
