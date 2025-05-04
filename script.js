@@ -36,3 +36,12 @@ playBtn.addEventListener("click", () => {
         playBtn.textContent = "Play";
     }
 });
+
+prevBtn.addEventListener("click", () => {
+    currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+    loadTrack(currentTrack);
+    audio.play();
+    playBtn.textContent = "Pause";
+});
+
+
