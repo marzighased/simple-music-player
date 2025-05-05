@@ -51,6 +51,17 @@ nextBtn.addEventListener("click", () => {
     playBtn.textContent = "Pause";
 });
 
+const seekBar = document.getElementById("seekBar");
+
+audio.addEventListener("timeupdate", () => {
+    seekBar.max = Math.floor(audio.duration);
+    seekBar.value = Math.floor(audio.currentTime);
+});
+
+seekBar.addEventListener("input", () => {
+    audio.currentTime = seekBar.value;
+});
+
 
 
 
