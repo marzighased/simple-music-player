@@ -77,6 +77,12 @@ audio.addEventListener("timeupdate", () => {
 
 });
 
+const muteBtn = document.getElementById("muteBtn");
+muteBtn.addEventListener("click", () => {
+    audio.muted = !audio.muted;
+    muteBtn.textContent = audio.muted ? "Unmute" : "Mute";
+});
+
 
 
 
