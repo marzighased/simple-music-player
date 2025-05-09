@@ -83,6 +83,11 @@ muteBtn.addEventListener("click", () => {
     muteBtn.textContent = audio.muted ? "Unmute" : "Mute";
 });
 
+const volumeControl = document.getElementById("volumeControl");
+volumeControl.addEventListener("input", () => {
+    audio.volume = volumeControl.value;
+});
+
 
 
 
