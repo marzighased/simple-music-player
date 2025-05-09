@@ -88,6 +88,13 @@ volumeControl.addEventListener("input", () => {
     audio.volume = volumeControl.value;
 });
 
+audio.addEventListener("ended", () => {
+    currentTrack = (currentTrack + 1) % tracks.length;
+    loadTrack(currentTrack);
+    audio.play();
+    playBtn.textContent = "Pause";
+});
+
 
 
 
